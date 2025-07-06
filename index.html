@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown preview</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/style.css" />
   </head>
   <body>
     <h1>Markdown → HTML preview</h1>
 
     <h2>Input</h2>
+    <div class="copy">
+      <button id="pasteMd">Paste from Clipboard</button>
+      <button id="copyMd">Copy to Clipboard</button>
+    </div>
+    <br />
     <textarea
       id="user_text_input"
       placeholder="Write some markdown here..."
@@ -19,10 +24,13 @@
     <div id="preview"></div>
 
     <h2>HTML code</h2>
+    <div class="copy">
+      <button id="copyHTML">Copy to Clipboard</button>
+    </div>
+
+    <br />
     <textarea id="htmlTextArea" readonly></textarea>
 
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="public/app.js"></script>
   </body>
 </html>
