@@ -1,0 +1,42 @@
+:root {
+  padding: 0;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: auto;
+  background-color: bisque;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#user_text_input,
+#preview,
+#htmlTextArea {
+  width: 60%;
+  height: 10rem;
+  font-family: sans-serif;
+  font-size: 1em;
+  padding: 0.6rem;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 0.5rem;
+  margin: 1rem 2rem;
+}
+#preview {
+  background-color: white;
+  height: auto;
+}
+
+#preview h1 {
+  font-size: 2em;
+  margin: auto;
+  height: auto;
+}
+
+#htmlTextArea {
+  font-family: monospace;
+}
