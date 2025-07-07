@@ -7,29 +7,40 @@
     <link rel="stylesheet" href="public/style.css" />
   </head>
   <body>
-    <h1>Markdown → HTML preview</h1>
+    <header><h1>Markdown Previewer</h1>
+    <p><a id="cheatsheet" href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheat Sheet</a></p></header>
 
-    <h2>Input</h2>
-    <div class="copy">
-      <button id="pasteMd">Paste from Clipboard</button>
-      <button id="copyMd">Copy to Clipboard</button>
-    </div>
-    <br />
-    <textarea
-      id="user_text_input"
-      placeholder="Write some markdown here..."
-    ></textarea>
+    <section>
+      <div class="preview_header">
+        <h2>Write Markdown</h2>
+        <div class="copy">
+          <button id="copyMd">Copy to Clipboard</button>
+          <button id="pasteMd">Paste from Clipboard</button>
+        </div>
+      </div>
+      <textarea
+        id="user_text_input"
+        placeholder="Write some markdown here..."
+        class="preview"
+      ></textarea>
+    </section>
 
-    <h2>Formatted Markdown Preview</h2>
-    <div id="preview"></div>
+    <section>
+      <div class="preview_header"><h2>Formatted Preview</h2></div>
+      <div id="md_preview" class="preview"></div>
+    </section>
 
-    <h2>HTML code</h2>
-    <div class="copy">
-      <button id="copyHTML">Copy to Clipboard</button>
-    </div>
+    <section>
+      <div class="preview_header">
+        <h2>Markdown → HTML</h2>
+        <div class="copy">
+          <button id="copyHTML">Copy to Clipboard</button>
+        </div>
+      </div>
+      <textarea id="htmlTextArea" class="preview" readonly></textarea>
+    </section>
 
-    <br />
-    <textarea id="htmlTextArea" readonly></textarea>
+    <footer><a href="https://github.com/thrly/">made by thrly, 2025</a></footer>
 
     <script type="module" src="public/app.js"></script>
   </body>

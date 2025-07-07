@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 
 const input = document.getElementById("user_text_input");
 
-const mdPreview = document.getElementById("preview");
+const mdPreview = document.getElementById("md_preview");
 const htmlPreviewText = document.getElementById("htmlTextArea");
 
 let cleanHtml;
@@ -11,7 +11,6 @@ let cleanHtml;
 input.addEventListener("input", () => {
   const rawHtml = marked.parse(input.value, { gfm: true });
   cleanHtml = DOMPurify.sanitize(rawHtml);
-
   mdPreview.innerHTML = cleanHtml;
   htmlPreviewText.value = cleanHtml;
 });
